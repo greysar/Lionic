@@ -96,6 +96,11 @@ html {
   background: #3172b9;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.btn:hover {
+  background-color: blue;
 }
 
 .btn.btn-big {
@@ -131,6 +136,11 @@ html {
 
 .nav-link {
   color: #1c1c1c;
+  transition: color .3s ease;
+}
+
+.nav-link:hover {
+  color: #3172b9
 }
 
 .nav-item.is-active .nav-link {
@@ -154,16 +164,16 @@ html {
   background-size: contain;
 }
 
-.hero-container {
+.section-hero__container {
   padding-top: 120px;
   padding-bottom: 130px;
 }
 
-.hero-content {
+.section-hero__content {
   max-width: 50%;
 }
 
-.section-hero-heading {
+.section-hero__heading {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 40px;
@@ -172,18 +182,18 @@ html {
   color: #1c1c1c;
 }
 
-.section-hero-action {
+.section-hero__action {
   display: inline-block;
 }
 
-.section-hero-description {
+.section-hero__description {
   margin-bottom: 30px;
   font-size: 16px;
   line-height: 25px;
   color: #757575;
 }
 
-.section-hero-btn-description {
+.section-hero__btn-description {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +205,7 @@ html {
   color: #787878;
 }
 
-.section-hero-ssl-icon {
+.section-hero__ssl-icon {
   display: inline-block;
   margin-right: 10px;
   width: 13px;
@@ -244,14 +254,36 @@ html {
   border: 1px solid #e4e4e4;
   border-radius: 5px;
   padding: 60px 30px;
+  transition-property: background-color, color;
+  transition-duration: .3s;
+  transition-timing-function: ease;
 }
 
 .section-do-item:not(:last-child) {
   margin-right: 30px;
 }
 
+.section-do-item:hover {
+  background-color: #3172b9;
+  color: white;
+  cursor: pointer;
+}
+
+.section-do-item:hover .section-do-item-description,
+.section-do-item:hover .section-do-item-heading {
+  color: white;
+}
+
+.section-do-item:hover .section-do-icon path {
+  fill: white;
+}
+
 .section-do-icon {
   margin-bottom: 30px;
+}
+
+.section-do-icon path {
+  transition: fill .3s ease;
 }
 
 .section-do-item-heading {
@@ -269,6 +301,7 @@ html {
   text-align: center;
   margin-top: 0;
   color: #787878;
+  transition: color .3s ease;
 }
 
 /*********************** What We Do END ***********************/
